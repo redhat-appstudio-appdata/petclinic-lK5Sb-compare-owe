@@ -7,7 +7,7 @@ spec:
   host: route111222
   path: /
   port:
-    targetPort: 5555
+    targetPort: 5566
   to:
     kind: Service
     name: component-sample-2

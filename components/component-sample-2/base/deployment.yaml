@@ -37,18 +37,18 @@ spec:
         livenessProbe:
           httpGet:
             path: /
-            port: 5555
+            port: 5566
           initialDelaySeconds: 10
           periodSeconds: 10
         name: container-image
         ports:
         - containerPort: 1111
-        - containerPort: 5555
+        - containerPort: 5566
         readinessProbe:
           initialDelaySeconds: 10
           periodSeconds: 10
           tcpSocket:
-            port: 5555
+            port: 5566
         resources:
           limits:
             cpu: "2"
