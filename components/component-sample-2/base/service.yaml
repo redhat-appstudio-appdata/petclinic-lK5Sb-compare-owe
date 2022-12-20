@@ -14,8 +14,8 @@ spec:
   ports:
   - port: 1111
     targetPort: 1111
-  - port: 4444
-    targetPort: 4444
+  - port: 5555
+    targetPort: 5555
   selector:
     app.kubernetes.io/instance: component-sample
 status:

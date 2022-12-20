@@ -4,10 +4,10 @@ metadata:
   creationTimestamp: null
   name: http-8081
 spec:
-  host: route111
+  host: route111222
   path: /
   port:
-    targetPort: 4444
+    targetPort: 5555
   to:
     kind: Service
     name: component-sample-2

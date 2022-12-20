@@ -11,7 +11,7 @@ metadata:
     maysun: test
   name: deploy-sample
 spec:
-  replicas: 4
+  replicas: 5
   selector:
     matchLabels:
       app.kubernetes.io/instance: component-sample
@@ -29,33 +29,33 @@ spec:
         - name: BARBAR
           value: bar1
         - name: FOO
-          value: foo1
+          value: foo11
         - name: BAR
-          value: bar1
-        image: quay.io/myimage
+          value: bar11
+        image: quay.io/myimage2
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /
-            port: 4444
+            port: 5555
           initialDelaySeconds: 10
           periodSeconds: 10
         name: container-image
         ports:
         - containerPort: 1111
-        - containerPort: 4444
+        - containerPort: 5555
         readinessProbe:
           initialDelaySeconds: 10
           periodSeconds: 10
           tcpSocket:
-            port: 4444
+            port: 5555
         resources:
           limits:
             cpu: "2"
             memory: 500Mi
             storage: 400Mi
           requests:
-            cpu: 700m
-            memory: 400Mi
-            storage: 200Mi
+            cpu: 701m
+            memory: 401Mi
+            storage: 201Mi
 status: {}
